@@ -5,6 +5,9 @@ import { Link } from "react-router-dom";
 function About(props) {
   const themeContextAPI = React.useContext(ThemeContext);
   const { bgColor, textColor, btnColor } = themeContextAPI.themeObj;
+  const [more, setMore] = React.useState(false);
+
+  const clickHandler = () => setMore(!more);
 
   return (
     <div className={[bgColor, textColor, ""].join(" ")}>
@@ -21,13 +24,28 @@ function About(props) {
               hobi, pet shop, takı&aksesuar ve süpermarket gibi farklı
               kategoriler altında da yüzbinlerce ürünü müşterilerine sunuyor.
             </p>
-            <p>
-              <a href="" className={`ms-3 me-3 btn ${btnColor}`}>
-                <Link to="/readmore" className="nav-link">
-                  Daha Fazla Oku..
-                </Link>
-              </a>
-            </p>
+
+            {more ? (
+              <p className="lead">
+                Türkiye'de e-ticaret sektörüne yeni bir bakış açısı getirmek, en
+                hızlı ve kolay şekilde ürün gönderimi yapılabilmesini sağlamak
+                hedefiyle 2006 yılında kurulan DamlaCicek.com, çiçek ve
+                yenilebilir çiçek kategorilerinin yanı sıra bünyesine kattığı
+                elektronik, ev&yaşam, kişisel bakım, kozmetik, moda,
+                spor&outdoor, hobi, pet shop, takı&aksesuar ve süpermarket gibi
+                farklı kategoriler altında da yüzbinlerce ürünü müşterilerine
+                sunuyor.
+              </p>
+            ) : (
+              ""
+            )}
+
+            <span
+              className={`ms-3 me-3 btn ${btnColor}`}
+              onClick={clickHandler}
+            >
+              {more ? "Kapat" : "Daha Fazlasini Goster"}
+            </span>
           </div>
         </div>
       </section>

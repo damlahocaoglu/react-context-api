@@ -4,7 +4,6 @@ import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import About from "./components/About";
-import ReadMore from "./components/ReadMore";
 import Products from "./components/Products";
 import Contact from "./components/Contact";
 import Home from "./components/Home";
@@ -22,9 +21,6 @@ export default function App() {
           </Route>
           <Route path="/about">
             <About />
-          </Route>
-          <Route path="/readmore">
-            <ReadMore />
           </Route>
           <Route path="/contact">
             <Contact />
