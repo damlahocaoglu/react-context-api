@@ -1,13 +1,12 @@
 import React from "react";
 import { ThemeContext } from "../context/ThemeContext";
 
-
 function Contact(props) {
   const themeContextAPI = React.useContext(ThemeContext);
   const { bgColor, textColor, btnColor } = themeContextAPI.themeObj;
 
   return (
-    <div className={[bgColor, textColor, "my-5"].join(" ")}>
+    <div className={[bgColor, textColor, ""].join(" ")}>
       <form className="mx-4">
         <div className="mb-3">
           <label for="exampleInputEmail1" className="form-label mt-3">
