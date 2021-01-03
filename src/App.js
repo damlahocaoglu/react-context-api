@@ -4,8 +4,8 @@ import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import About from "./components/About";
-import Products from "./components/Products";
 import ReadMore from "./components/ReadMore";
+import Products from "./components/Products";
 import Contact from "./components/Contact";
 import Home from "./components/Home";
 
